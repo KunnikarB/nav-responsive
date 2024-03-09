@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #A16AE8;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #FD49A0;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #603F8B;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: #B4FEE7;
+  color: #FD49A0;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+footer {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: #FD49A0;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: #603F8B;
+    font-size: 1rem;
+    margin-left: 2rem; 
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #B4FEE7;
+  }
+
+}
+/*BREAKPOINT FOR DESKTOP*/ 
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: pink;
+  }
+
+}
+
+/*BREAKPOINT FOR TABLET*/
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #603F8B;
+  }
+
+  .nav {
+    background-color: #FD49A0;
+  }
+
+  .nav > .nav-header > .nav-title {
+    color: #B4FEE7;
+  }
+
+  footer {
+    background-color: #FD49A0;
+
+    a {
+      color: #B4FEE7;
+    }
+  }
+}
+
+/*BREAKPOINT FOR MOBILE*/
+@media screen and (max-width: 576px) {
+
+  body {
+    background-color: #FD49A0;
+  }
+
+  .nav {
+    background-color: #603F8B;
+  }
+
+  .nav > .nav-header > .nav-title {
+    color: #FD49A0;
+  }
+
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+   /* .nav > .nav-btn > label { */
+    .nav > .nav-btn > labe {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  } 
+
+  .nav > .nav-btn > lebel:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: #603F8B;
+    cursor: pointer;
+  } 
+
+  .nav > .nav-btn > label > i {
+    display: block;
+    font-size: 2rem;
+    color: white;
+  } 
+
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #A16AE8;
+    height: 0px;
+    /* transition: all 0.3s ease-in; */
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+  footer {
+    background-color: #603F8B;
+    a {
+      color: #FD49A0;}
+  }
+
+}
+  
+
+
