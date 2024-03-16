@@ -140,7 +140,7 @@ footer {
     padding: 13px;
   } 
 
-  .nav > .nav-btn > lebel:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
     background-color: #603F8B;
     cursor: pointer;
   } 
